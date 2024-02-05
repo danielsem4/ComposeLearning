@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ComposeLearning</string>
+    <string name="store_description">ממוקם בלב חולון, "פוטס וקלוס" הוא מקום קסום וקטן לאוהבי חיות מחמד. החנות הנעימה והנוחה שלנו, שנמצאת במרכז העיר התוססת הזו, מציעה חוויה ייחודית ואישית גם לחיות המחמד וגם לבעליהן.</string>
+    <string name="home">בית</string>
+    <string name="cart">עגלה</string>
+    <string name="help">עזרה</string>
+    <string name="settings">הגדרות</string>
+    <string name="store">לחנות</string>
+    <string name="contact">צרו קשר</string>
+
+</resources>
