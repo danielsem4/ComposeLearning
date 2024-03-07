@@ -11,6 +11,7 @@ object Dimen {
 
     val SmallTextSize1 = 12.sp
     val MediumTextSize1 = 18.sp
+    val BigTextSize1 = 24.sp
 
     val SmallCardElevation = 5.dp
     val MediumCardElevation = 8.dp
@@ -21,5 +22,6 @@ object Dimen {
 
     val smallButtonSize = 48.dp
 
+    val SmallBoxSize = 20.dp
 
 }

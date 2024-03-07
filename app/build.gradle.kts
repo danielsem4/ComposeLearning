@@ -67,12 +67,17 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+    implementation ("com.google.android.material:material:1.11.0")
+
     // Compose Navigation
-    implementation("androidx.navigation:navigation-compose:2.7.6")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 
     // Splash Api
     implementation("androidx.core:core-splashscreen:1.0.1")
 
     // pager
     implementation("com.google.accompanist:accompanist-pager:0.12.0")
+
+    // navigation
+    implementation ("androidx.navigation:navigation-compose:2.7.7")
 }

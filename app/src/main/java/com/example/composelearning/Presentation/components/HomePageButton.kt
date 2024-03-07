@@ -1,4 +1,4 @@
-package com.example.composelearning.presentation.components
+package com.example.composelearning.Presentation.components
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width

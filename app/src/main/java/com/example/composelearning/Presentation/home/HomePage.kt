@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3Api::class)
 
-package com.example.composelearning.presentation.home
+package com.example.composelearning.Presentation.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,15 +10,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Create
 import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -32,20 +29,23 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.example.composelearning.Data.Dimen.MediumPadding1
 import com.example.composelearning.Data.Dimen.MediumTextSize1
 import com.example.composelearning.Data.Dimen.SmallPadding1
 import com.example.composelearning.Data.images
 import com.example.composelearning.R
-import com.example.composelearning.presentation.components.AppBar
-import com.example.composelearning.presentation.components.HomePageButton
-import com.example.composelearning.presentation.components.ImageSlider
-import com.example.composelearning.presentation.components.NavigationDrawer
+import com.example.composelearning.Presentation.components.AppBar
+import com.example.composelearning.Presentation.components.HomePageButton
+import com.example.composelearning.Presentation.components.ImageSlider
+import com.example.composelearning.Presentation.components.NavigationDrawer
+import com.example.composelearning.Presentation.navgraph.Route
 import kotlinx.coroutines.launch
 
 @Composable
 fun HomePage(
     modifier: Modifier = Modifier,
+    navController: NavController
 ) {
     val scaffoldState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
@@ -70,6 +70,7 @@ fun HomePage(
                             scaffoldState.open()
                         }
                     },
+                    stringResource(id = R.string.shop_name),
                     Icons.Default.Menu
                 )
             },
@@ -98,17 +99,17 @@ fun HomePage(
                         .fillMaxWidth()
                 ) {
                     HomePageButton(stringResource(id = R.string.store), Icons.Outlined.ShoppingCart, {})
-                    HomePageButton(stringResource(id = R.string.contact), Icons.Outlined.Create, {})
+                    HomePageButton(stringResource(id = R.string.contact), Icons.Outlined.Create, {
+                        navController.navigate(Route.ContactUs.route)
+                    })
                 }
             }
         }
     }
 }
 
-//ImageSlider(modifier, images)
-
 @Preview(showBackground = true)
 @Composable
 fun HomePagePreview() {
-    HomePage()
+
 }

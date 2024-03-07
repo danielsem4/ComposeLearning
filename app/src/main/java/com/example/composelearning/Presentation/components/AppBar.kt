@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.example.composelearning.presentation.components
+package com.example.composelearning.Presentation.components
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -11,11 +11,13 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.surfaceColorAtElevation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun AppBar(
     onNavigationIconClick: () -> Unit,
+    appBarHeadline: String,
     imageVector: ImageVector?
 ) {
     CenterAlignedTopAppBar(
@@ -32,7 +34,10 @@ fun AppBar(
             }
         },
         title = {
-            Text(text = "Paws & Claws")
+            Text(
+                text = appBarHeadline,
+                fontWeight = FontWeight.SemiBold
+            )
         },
         colors = TopAppBarDefaults.smallTopAppBarColors(
             MaterialTheme.colorScheme.surfaceColorAtElevation(

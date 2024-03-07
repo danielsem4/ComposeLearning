@@ -9,4 +9,12 @@
     <string name="store">לחנות</string>
     <string name="contact">צרו קשר</string>
 
+    <string name="name">שם</string>
+    <string name="email">איימיל</string>
+    <string name="message">הודעה</string>
+    <string name="leave_details">השאר פרטים</string>
+    <string name="send">שליחה</string>
+
+    <string name="or_contact_us_with">ניתן ליצור קשר גם עם</string>
+
 </resources>
